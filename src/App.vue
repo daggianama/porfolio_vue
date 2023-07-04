@@ -1,15 +1,15 @@
 <template>
   <div class=" ">
       <NavBar />
-      <header class="  my-4 ">
-        <nav class="container flex h-16 p-6 gap-8 items-center justify-between  ">
+      <header class="my-4">
+        <nav class=" flex h-16 gap-8 items-center justify-between ">
         
           <div class="flex items-center gap-3 flex-1">
-              <h1 class="text-2xl">MY PORTFOLIO</h1>
+              <h1 class="text-2xl">PORTFOLIO</h1>
             </div>
             <!-- bind : the class attribute to a js exp that will give a class if the condition is true -->
             
-            <div class="flex gap-8 justify-end">
+            <div class="flex gap-12 text-md">
               <a :class="{ active: isAdmin  }" @click="isAdmin = true">ADMIN</a>
               <a :class="{ active: !isAdmin }" @click="isAdmin = false">USER</a>
             </div>
@@ -17,8 +17,10 @@
         </nav>
           
       </header>
-    <admin v-if="isAdmin" @createProject="addProject" />  
-    <user v-else :projects="allProjects"/>
+      <div class="text-gray-600 ">
+        <admin v-if="isAdmin" @createProject="addProject" />  
+        <user v-else :projects="allProjects"/>
+      </div>
   </div>
 </template>
 <!-- if isAdmin is true, render admin component 

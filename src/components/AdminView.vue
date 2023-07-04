@@ -1,23 +1,24 @@
 <template>
-  <div class="form">
-    <div class="titleUrl-group">
-      <div class="description group-input">
+  <div class="flex flex-col pt-32 px-12 w-50vw gap-4">
+    <div class="flex gap-6 w-full ">
+      <div class="flex flex-col w-full gap-2">
         <h3>Project Title</h3>
-        <input v-model="title" />
+        <input class="h-10" v-model="title" />
       </div>
-      <div class="description group-input">
+      <div class="description flex flex-col w-full gap-2">
         <h3>Image URL</h3>
-        <input v-model="image" />
+        <input class="h-10" v-model="image" />
       </div>
     </div>
-    <div class="description group-input">
+    <div class="description flex flex-col w-full gap-2">
       <h3>Project Description</h3>
       <textarea
 					type="text"
-					v-model="description">
+					v-model="description"
+          class="h-20">
 				</textarea>
     </div>
-    <button class="submit" @click="handleSubmit">SUBMIT</button>
+    <button class="my-6 border-2 border-gray-600 py-3 hover:bg-gray-600 hover:text-white" @click="handleSubmit">SUBMIT</button>
   </div>
 </template>
 
@@ -47,44 +48,6 @@ export default {
 </script>
 
 <style>
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em 0;
-  padding: 8em 0;
-  width: 100%;
-  max-width: 80vh;
 
-}
 
-.titleUrl-group {
-  display: flex;
-  gap: 0 1em;
-  width: 100%;
-}
-
-.group-input {
-  display: flex;
-  flex-direction: column;
-  align-content: stretch;
-  width: 100%;
-  height: 100%;
-
-}
-
-input, textarea{
-  width: 100%;
-}
-
-.submit {
-  color: black;
-  border: 1px solid black;
-  margin-top: 10px;
-  padding: 4px 6em;
-}
-
-.submit:hover {
-  background-color: black;
-  color: white;
-}
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="p-2 mt-24">
-    <div class="featured-selected flex flex-wrap w-full gap-2">
+  <div class=" mt-24">
+    <div class="featured-selected flex flex-wrap w-full gap-1">
       <img class="w-40vw h-70vh " :src="projects[index].image" />
       <div class="w-96 ">
         <h2>{{ projects[index].title }}</h2>
@@ -8,8 +8,8 @@
       </div>
     </div>
     <div class="gallery">
-      <div class="project-img" v-for="(project, i) in projects" key="i" @click="FeatureProject(i)"> 
-        <img :src="project.image" />
+      <div class="h-64 w-64" v-for="(project, i) in projects" key="i" @click="FeatureProject(i)"> 
+        <img class="w-full h-full object-cover" :src="project.image" />
       </div>
    </div>
   </div>
@@ -44,60 +44,13 @@ export default {
 
 
 <style>
-.user {
-  margin-top: 5em;
-}
 
-.gallery {
-  margin-top: 7vw;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18vw, 1fr));
-  gap: 1em min(10px);
-  justify-content: center;
-}
-
-.project-img {
-  height: 20vw;
-  width: 20vw;
-}
 
 .project-img:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
+
 }
 
-.featured-selected {
- 
-  width: 100%;
-  gap: 2vw;
-  margin: 0 auto;
-}
-
-.featured-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  text-align: left;
-  padding: 0 2em 0 0;
-  max-width: 50%;
-  min-width: 22em;
-}
-
-.featured-text h2 {
-  width: 100%;
-}
-
-.featured-img {
-  min-height: 20em;
-  min-width: 20em;
-  max-width: 30vw;
-  max-height: 30v;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 </style>

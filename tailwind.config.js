@@ -32,7 +32,7 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '2rem',
+      padding: '.1rem',
     },
     screens: {
       'sm': '640px',

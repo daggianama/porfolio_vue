@@ -9,13 +9,12 @@
     margin: 0 auto;
     line-height: 1.3em;
     box-sizing: border-box;
-    text-decoration: none;
     list-style: none;
 }
 
 body {
     background-color: rgba(238, 238, 238, 0.388);
-    width: 80vw;
+    width: 70vw;
     margin: 0 auto;
     padding: 0;
 }
@@ -24,12 +23,27 @@ body {
 button, a {
     cursor: pointer;
    
-    border-bottom: .3rem solid rgba(255, 255, 255, 0);
+    border-bottom: .2rem solid rgba(255, 255, 255, 0);
 }
 
 a.active {
-    border-bottom: .3rem solid rgb(255, 196, 186);
+    border-bottom: .2rem solid rgb(189, 29, 18);
 
 }
 
-/* ************ APP MAIN **********/
+a:hover {
+transform: translateY(2px);
+    transition: transform 0.3s ease;
+}
+
+/* ************ USER VIEW **********/
+
+
+.gallery {
+    margin: 4em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18vw, 1fr));
+    gap: 1em min(10px);
+    justify-content: center;
+  }
+  
