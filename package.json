@@ -1,15 +1,19 @@
 {
-  "name": "fs-vue-portfolio",
+  "name": "portfolio_vue",
   "version": "0.2.0",
+  "homepage": "https://daggianama.github.io/portfolio_vue/",
   "private": true,
   "author": "Krista Moroder & Germinal Camps for CodeOp",
   "license": "Proprietary",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 5050"
+    "preview": "vite preview --port 5050",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^3.0.0",
     "vue": "^3.2.33"
   },
   "devDependencies": {
