@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ************ APP MAIN **********/
+
+* {
+  font-family: sans-serif;
+  margin: 0 auto;
+  line-height: 1.5em;
+  box-sizing: border-box;
+  max-width: 96%;
+}
+
+.top-menu {
+  margin: 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black;
+}
+
+button {
+  background-color: white ;
+  color: black;
+  border: none;
+  padding: 0 2.2em;
+  margin-bottom: 6px;
+}
+
+button.active {
+  background-color:  rgb(188, 34, 7);
+  color: white;
+  border: none;
+  padding: 0 2.2em;
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 0 1em;
+}
+
+/* ************ APP MAIN **********/

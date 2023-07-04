@@ -1,13 +1,13 @@
 <template>
   <div>
-      <div class="top-menu">
+      <nav class="top-menu mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <h1>MY PORTFOLIO</h1>
         <!-- bind : the class attribute to a js exp that will give a class if the condition is true -->
         <div class="profile-buttons">
           <button :class="{ active: isAdmin }" @click="isAdmin = true">ADMIN</button>
           <button :class="{ active: !isAdmin }" @click="isAdmin = false">USER</button>
         </div>
-      </div>
+      </nav>
     <admin v-if="isAdmin" @createProject="addProject" />  
     <user v-else :projects="allProjects"/>
   </div>
@@ -58,40 +58,3 @@ export default {
 };
 </script>
 
-<style>
-* {
-  font-family: sans-serif;
-  margin: 0 auto;
-  line-height: 1.5em;
-  box-sizing: border-box;
-  max-width: 96%;
-}
-
-.top-menu {
-  margin-top: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom: 1px solid black;
-}
-
-button {
-  background-color: white ;
-  color: black;
-  border: none;
-  padding: 0 2.2em;
-  margin-bottom: 6px;
-}
-
-button.active {
-  background-color:  rgb(188, 34, 7);
-  color: white;
-  border: none;
-  padding: 0 2.2em;
-}
-
-.profile-buttons {
-  display: flex;
-  gap: 0 1em;
-}
-
-</style>
