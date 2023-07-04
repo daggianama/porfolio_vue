@@ -1,8 +1,8 @@
 <template>
-  <div class="user">
-    <div class="featured-selected">
-      <img class="featured-img" :src="projects[index].image" />
-      <div class="featured-text">
+  <div class="p-2 mt-24">
+    <div class="featured-selected flex flex-wrap w-full gap-2">
+      <img class="w-40vw h-70vh " :src="projects[index].image" />
+      <div class="w-96 ">
         <h2>{{ projects[index].title }}</h2>
         <p>{{ projects[index].description }}</p>
       </div>
@@ -67,8 +67,7 @@ export default {
 }
 
 .featured-selected {
-  display: flex;
-  flex-wrap: wrap;
+ 
   width: 100%;
   gap: 2vw;
   margin: 0 auto;
@@ -92,7 +91,7 @@ export default {
   min-height: 20em;
   min-width: 20em;
   max-width: 30vw;
-  max-height: 30vw;
+  max-height: 30v;
 }
 
 img {
